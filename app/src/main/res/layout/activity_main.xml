@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_constraintEnd_toEndOf="parent"
+
     tools:context=".MainActivity">
 <TableRow
     android:layout_height="match_parent"
@@ -14,10 +14,10 @@
     <TextView
         android:id="@+id/Scorekeeper"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:text="Scorekeeper"
-        android:textSize="25dp"
-        android:textColor="@color/colorPrimaryDark"/>
+        style="@style/text"
+        android:textSize="25dp" />
 </TableRow>
     <TableRow>
     <TextView
@@ -25,14 +25,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Team 1"
-        android:textSize="19dp"
-        android:textColor="@color/colorAccent"/>
+        style="@style/text1"
+        android:textSize="19dp" />
     </TableRow>
 
 <TableRow>
 
     <Button
         android:id="@+id/increment"
+        style="@style/Button"
         android:layout_height="wrap_content"
         android:layout_width="167dp"
         android:text="@string/increment" />
@@ -43,7 +44,7 @@
         android:id="@+id/decrement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        style="@style/Button"
         android:text="@string/Decrement"/>
 </TableRow>
 <TableRow>
@@ -54,15 +55,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Team 2"
-        android:textSize="19dp"
-        android:textColor="@color/colorAccent"/>
+        style="@style/text1"
+        android:textSize="19dp"/>
 </TableRow>
 <TableRow>
     <Button
         android:id="@+id/button8"
         android:layout_width="167dp"
         android:layout_height="wrap_content"
-
+        style="@style/Button"
         android:text="@string/increment" />
 </TableRow>
 <TableRow>
@@ -70,36 +71,41 @@
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        style="@style/Button"
         android:text="@string/Decrement" />
 </TableRow>
     <TableRow/>
 
-<TableRow>
-    <RadioGroup
-        android:id="@+id/radioScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <RadioButton
-            android:id="@+id/radioincrement1"
+        <RadioGroup
+            android:id="@+id/radioScore"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:checked="true" />
+            android:layout_height="wrap_content">
 
-        <RadioButton
-            android:id="@+id/radioincrement2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2" />
-        <RadioButton
-            android:id="@+id/radioincrement3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3"/>
+            <RadioButton
+                android:id="@+id/radioincrement1"
+                style="@style/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="1" />
 
+            <RadioButton
+                android:id="@+id/radioincrement2"
+                style="@style/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"/>
 
-    </RadioGroup>
-</TableRow>
+            <RadioButton
+                android:id="@+id/radioincrement3"
+                style="@style/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="3" />
+        </RadioGroup>
+    </TableRow>
 </TableLayout>
